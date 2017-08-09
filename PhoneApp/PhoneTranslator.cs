@@ -3,8 +3,9 @@ using System.Text;
 
 namespace PhoneApp
 {
-    internal class PhoneTranslator
+    public class PhoneTranslator
     {
+        // LOGIQUE DE L'APP
         string Letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         string Numbers = "22233344455566677778889999";
         

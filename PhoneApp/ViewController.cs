@@ -13,6 +13,8 @@ namespace PhoneApp
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            // Traduce el numero a llamar
             var TranslatedNumber = string.Empty;
 
             TranslateButton.TouchUpInside += (object sender, EventArgs e) => 
@@ -35,6 +37,7 @@ namespace PhoneApp
 
             };
 
+            // Llama.
             CallButton.TouchUpInside += (object sender, EventArgs e) =>
             {
                 var URL = new Foundation.NSUrl($"tel:{TranslatedNumber}");
