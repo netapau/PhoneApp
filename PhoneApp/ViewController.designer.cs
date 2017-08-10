@@ -25,6 +25,14 @@ namespace PhoneApp
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton TranslateButton { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton VerifyButton { get; set; }
+
+        [Action ("VerifyButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void VerifyButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (CallButton != null) {
@@ -40,6 +48,11 @@ namespace PhoneApp
             if (TranslateButton != null) {
                 TranslateButton.Dispose ();
                 TranslateButton = null;
+            }
+
+            if (VerifyButton != null) {
+                VerifyButton.Dispose ();
+                VerifyButton = null;
             }
         }
     }
