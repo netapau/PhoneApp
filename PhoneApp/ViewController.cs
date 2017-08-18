@@ -1,12 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using Foundation;
 using UIKit;
 
 namespace PhoneApp
 {
     public partial class ViewController : UIViewController
     {
+        // Numero a llamar
+        string TranslatedNumber = string.Empty;
+
+        List<string> PhoneNumbers = new List<string>();
+
         public ViewController(IntPtr handle) : base(handle)
         {
+
         }
 
         public override void ViewDidLoad()
@@ -14,9 +22,8 @@ namespace PhoneApp
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            // Traduce el numero a llamar
-            var TranslatedNumber = string.Empty;
-
+        
+        
             TranslateButton.TouchUpInside += (object sender, EventArgs e) => 
             {
                 var Translator = new PhoneTranslator();
@@ -40,6 +47,8 @@ namespace PhoneApp
             // Llama.
             CallButton.TouchUpInside += (object sender, EventArgs e) =>
             {
+                PhoneNumbers.Add(TranslatedNumber);
+
                 var URL = new Foundation.NSUrl($"tel:{TranslatedNumber}");
                 //Utilizar el manejador de url con el prefijo tel: para invocar a la 
                 //aplicacion Phone de apple, de lo contrario mostrar un dialogo de alerta.
@@ -52,6 +61,20 @@ namespace PhoneApp
                     PresentViewController(Alert, true, null);
                 }
             };
+        }
+
+        
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            // Se desea realizar la transicion a CallHistoryControler ?
+            // Aqui ver Pattern Matching C# 7 !!!
+            if (segue.DestinationViewController is CallHistoryControler Controler)
+            {
+                // Se proporciona la lista denumeros telefonicos al CallHistoryControler
+                Controler.PhoneNumbers = PhoneNumbers;
+            }
         }
 
         public override void DidReceiveMemoryWarning()
