@@ -59,20 +59,36 @@ namespace PhoneApp
                     PresentViewController(Alert, true, null);
                 }
             };
+
+            // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades !)
+            CallHistoryButton.TouchUpInside += (sender, arg) =>
+            {
+                // Puede instanciarse el controlador con ID "CallHistoryControler" ?
+                // establecido en el diseñador.
+                if (this.Storyboard.InstantiateViewController("CallHistoryControler") is CallHistoryControler Controler)
+                {
+                    // Proporciona la lista de numeros telefonicos al CallHistoryControler
+                    Controler.PhoneNumbers = PhoneNumbers;
+                    // Coloca al controlador en la pila de navigacion
+                    this.NavigationController.PushViewController(Controler, true);
+                }
+            };
+
         }
         
-        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
-        {
-            base.PrepareForSegue(segue, sender);
+        // Maneja la navegacion mediante Segues (deslizar el boton hacia la pantalla)
+        //public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        //{
+        //    base.PrepareForSegue(segue, sender);
 
-            // Se desea realizar la transicion a CallHistoryControler ?
-            // Aqui ver Pattern Matching C# 7 !!!
-            if (segue.DestinationViewController is CallHistoryControler Controler)
-            {
-                // Se proporciona la lista denumeros telefonicos al CallHistoryControler
-                Controler.PhoneNumbers = PhoneNumbers;
-            }
-        }
+        //    // Se desea realizar la transicion a CallHistoryControler ?
+        //    // Aqui ver Pattern Matching C# 7 !!!
+        //    if (segue.DestinationViewController is CallHistoryControler Controler)
+        //    {
+        //        // Se proporciona la lista denumeros telefonicos al CallHistoryControler
+        //        Controler.PhoneNumbers = PhoneNumbers;
+        //    }
+        //}
 
         public override void DidReceiveMemoryWarning()
         {
