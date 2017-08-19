@@ -96,6 +96,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ValidacionTableViewControler.cs" />
+    <Compile Include="ValidacionTableViewControler.designer.cs">
+      <DependentUpon>ValidacionTableViewControler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidarViewControler.cs" />
+    <Compile Include="ValidarViewControler.designer.cs">
+      <DependentUpon>ValidarViewControler.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
