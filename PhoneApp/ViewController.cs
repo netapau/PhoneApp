@@ -22,8 +22,6 @@ namespace PhoneApp
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-        
-        
             TranslateButton.TouchUpInside += (object sender, EventArgs e) => 
             {
                 var Translator = new PhoneTranslator();
@@ -62,7 +60,6 @@ namespace PhoneApp
                 }
             };
         }
-
         
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
@@ -82,9 +79,7 @@ namespace PhoneApp
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
-
-        
-
+               
         partial void VerifyButton_TouchUpInside(UIButton sender)
         {
             Validate();

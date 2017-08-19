@@ -7,11 +7,9 @@ namespace PhoneApp
 {
     public partial class CallHistoryControler : UITableViewController
     {
-
         public List<string> PhoneNumbers { get; set; }
 
         protected NSString CallHistoryCellID = new NSString("CallHistoryCell");
-
 
         public CallHistoryControler(IntPtr handle) : base(handle)
         {
@@ -19,7 +17,6 @@ namespace PhoneApp
             TableView.Source = new CallHistoryDataSource(this);
         }
         
-
         class CallHistoryDataSource : UITableViewSource
         {
 
