@@ -35,15 +35,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="19" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="20" y="295" width="334" height="30"/>
-                                <state key="normal" title="Verificar Actividad">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="VerifyButton_TouchUpInside:" destination="BYZ-38-t0r" id="20" eventType="touchUpInside"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proporciona un número de teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="12" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="16" y="101" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -57,14 +48,24 @@
                                 </state>
                                 <connections/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="19" translatesAutoresizingMaskIntoConstraints="NO" key="tableFooterView" fixedFrame="YES">
+                                <rect key="frame" x="22" y="302" width="368" height="44"/>
+                                <state key="normal" title="Verificar Actividad">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="VerifyButton_TouchUpInside:" destination="BYZ-38-t0r" id="20" eventType="touchUpInside"/>
+                                    <segue id="2056" destination="1848" kind="show"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="PhoneNumberText" destination="13" id="name-outlet-13"/>
                         <outlet property="TranslateButton" destination="14" id="name-outlet-14"/>
                         <outlet property="CallButton" destination="15" id="name-outlet-15"/>
-                        <outlet property="VerifyButton" destination="19" id="name-outlet-19"/>
                         <outlet property="CallHistoryButton" destination="542" id="name-outlet-542"/>
+                        <outlet property="VerifyButton" destination="19" id="name-outlet-19"/>
                     </connections>
                     <navigationItem title="PhoneApp" id="539" key="navigationItem"/>
                 </viewController>
@@ -114,71 +115,45 @@
             </objects>
             <point key="canvasLocation" x="114" y="250"/>
         </scene>
-        <scene sceneID="1326">
+        <scene sceneID="1847">
             <objects>
-                <tableViewController id="1327" sceneMemberID="viewController" customClass="ValidarViewControler">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1328">
+                <tableViewController id="1848" sceneMemberID="viewController" customClass="ValidacionUIControler">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1849">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1335" rowHeight="344">
-                                <rect key="frame" x="0.0" y="28" width="414" height="344"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1852" rowHeight="35">
+                                <rect key="frame" x="0.0" y="72" width="414" height="35"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1335" id="1336">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="343"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1852" id="1853">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="1338" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                            <rect key="frame" x="19" y="79" width="376" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                        </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1337" translatesAutoresizingMaskIntoConstraints="NO" key="tableHeaderView" fixedFrame="YES">
-                                            <rect key="frame" x="22" y="19" width="376" height="44"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1339" translatesAutoresizingMaskIntoConstraints="NO" key="tableHeaderView" fixedFrame="YES">
-                                            <rect key="frame" x="19" y="128" width="376" height="44"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="1340" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                            <rect key="frame" x="22" y="180" width="376" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="2062" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="-12" width="388" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1341" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                            <rect key="frame" x="22" y="251" width="376" height="30"/>
-                                            <state key="normal" title="Validar">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="EmailText" destination="1338" id="name-outlet-1338"/>
-                                    <outlet property="ContrasenhaText" destination="1340" id="name-outlet-1340"/>
-                                    <outlet property="ValidarUiView" destination="1336" id="name-outlet-1336"/>
-                                    <outlet property="BtnValidar" destination="1341" id="name-outlet-1341"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="1327" id="1329"/>
-                            <outlet property="delegate" destination="1327" id="1330"/>
+                            <outlet property="dataSource" destination="1848" id="1850"/>
+                            <outlet property="delegate" destination="1848" id="1851"/>
                         </connections>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2060" translatesAutoresizingMaskIntoConstraints="NO" key="tableHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </tableView>
-                    <connections>
-                        <outlet property="RootTableView" destination="1328" id="name-outlet-1328"/>
-                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1333" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1854" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="-192"/>
+            <point key="canvasLocation" x="565" y="-244"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

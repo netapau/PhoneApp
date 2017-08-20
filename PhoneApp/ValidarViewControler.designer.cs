@@ -16,13 +16,13 @@ namespace PhoneApp
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView RootTableView { get; set; }
+        UIKit.UITableView ValidarTableView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (RootTableView != null) {
-                RootTableView.Dispose ();
-                RootTableView = null;
+            if (ValidarTableView != null) {
+                ValidarTableView.Dispose ();
+                ValidarTableView = null;
             }
         }
     }

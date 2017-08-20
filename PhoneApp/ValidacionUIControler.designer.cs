@@ -11,8 +11,8 @@ using UIKit;
 
 namespace PhoneApp
 {
-    [Register ("ValidacionTableViewControler")]
-    partial class ValidacionTableViewControler
+    [Register ("ValidacionUIControler")]
+    partial class ValidacionUIControler
     {
         void ReleaseDesignerOutlets ()
         {
