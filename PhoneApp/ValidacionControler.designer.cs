@@ -26,6 +26,10 @@ namespace PhoneApp
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton ValidacionButton { get; set; }
 
+        [Action ("ValidameEstaActividad:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ValidameEstaActividad (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (ContrasenhaTxt != null) {
