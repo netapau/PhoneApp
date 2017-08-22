@@ -24,11 +24,7 @@ namespace PhoneApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton ValidacionButton { get; set; }
-
-        [Action ("ValidacionButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void ValidacionButton_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UIButton ValidacionActividadButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -42,9 +38,9 @@ namespace PhoneApp
                 CorreoTxt = null;
             }
 
-            if (ValidacionButton != null) {
-                ValidacionButton.Dispose ();
-                ValidacionButton = null;
+            if (ValidacionActividadButton != null) {
+                ValidacionActividadButton.Dispose ();
+                ValidacionActividadButton = null;
             }
         }
     }

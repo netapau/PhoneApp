@@ -9,42 +9,21 @@ namespace PhoneApp
     {
         public ValidacionControler (IntPtr handle) : base (handle)
         {
-
+            
         }
 
-         class ValidacionDataSource : UITableViewSource
-        {
-            ValidacionControler Controler;
-
-            public ValidacionDataSource(ValidacionControler controler)
-            {
-                // Almacenar la instancia del UITableViewController
-                this.Controler = controler;
-            }
-
-            public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
-            {
-                //throw new NotImplementedException();
-                // Devuelve un UITableViewCell reutilizable creado con el identificador
-                // Controler.CallHistoryCellID
-                //var cell = tableView.DequeueReusableCell(Controler.CallHistoryCellID);
-
-                //cell.TextLabel.Text = Controler.PhoneNumbers[indexPath.Row];
-
-                return null;
-            }
-
-            public override nint RowsInSection(UITableView tableview, nint section)
-            {
-                return 0;  //Controler.PhoneNumbers.Count;
-            }
-        }
-
-            public override void ViewDidLoad()
+        public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            ValidacionActividadButton.TouchUpOutside += ValidacionActividadButton_TouchUpOutside;
         }
-        
+
+        private void ValidacionActividadButton_TouchUpOutside(object sender, EventArgs e)
+        {
+            Valida();
+        }
+
         private async void Valida()
         {
             var Client = new SALLab06.ServiceClient();
@@ -54,11 +33,6 @@ namespace PhoneApp
             Alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
 
             PresentViewController(Alert, true, null);
-        }
-
-        partial void ValidacionButton_TouchUpInside(UIButton sender)
-        {
-            Valida();
         }
     }
 }

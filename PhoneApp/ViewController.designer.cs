@@ -33,10 +33,6 @@ namespace PhoneApp
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton VerificarActividadButton { get; set; }
 
-        [Action ("VerifyButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void VerifyButton_TouchUpInside (UIKit.UIButton sender);
-
         void ReleaseDesignerOutlets ()
         {
             if (CallButton != null) {
