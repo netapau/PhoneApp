@@ -73,8 +73,20 @@ namespace PhoneApp
                 }
             };
 
+            // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades !)
+            VerificarActividadButton.TouchUpInside += (sender, arg) =>
+            {
+                // Puede instanciarse el controlador con ID "CallHistoryControler" ?
+                // establecido en el diseñador.
+                if (this.Storyboard.InstantiateViewController("ValidacionControler") is ValidacionControler Controler)
+                {
+                    // Coloca al controlador en la pila de navigacion
+                    this.NavigationController.PushViewController(Controler, true);
+                }
+            };
+
         }
-        
+
         // Maneja la navegacion mediante Segues (deslizar el boton hacia la pantalla)
         //public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         //{

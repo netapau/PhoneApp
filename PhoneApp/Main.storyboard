@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController" storyboardIdentifier="ViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -55,7 +55,6 @@
                                 </state>
                                 <connections>
                                     <action selector="VerifyButton_TouchUpInside:" destination="BYZ-38-t0r" id="20" eventType="touchUpInside"/>
-                                    <segue id="2433" destination="2368" kind="show"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,7 +64,7 @@
                         <outlet property="TranslateButton" destination="14" id="name-outlet-14"/>
                         <outlet property="CallButton" destination="15" id="name-outlet-15"/>
                         <outlet property="CallHistoryButton" destination="542" id="name-outlet-542"/>
-                        <outlet property="VerifyButton" destination="19" id="name-outlet-19"/>
+                        <outlet property="VerificarActividadButton" destination="19" id="name-outlet-19"/>
                     </connections>
                     <navigationItem title="PhoneApp" id="539" key="navigationItem"/>
                 </viewController>
@@ -75,7 +74,7 @@
         </scene>
         <scene sceneID="260">
             <objects>
-                <navigationController id="261" sceneMemberID="viewController">
+                <navigationController id="261" sceneMemberID="viewController" customClass="NavigationControler" storyboardIdentifier="NavigationControler">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="263">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -113,11 +112,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="811" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="250"/>
+            <point key="canvasLocation" x="940" y="-462"/>
         </scene>
         <scene sceneID="2367">
             <objects>
-                <viewController id="2368" sceneMemberID="viewController" customClass="ValidacionControler" title="Validar actividad">
+                <viewController id="2368" sceneMemberID="viewController" customClass="ValidacionControler" title="Validar actividad" storyboardIdentifier="ValidacionControler">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2365"/>
                         <viewControllerLayoutGuide type="bottom" id="2366"/>
@@ -155,7 +154,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ValidameEstaActividad:" destination="2368" id="2440" eventType="touchUpOutside"/>
+                                    <action selector="ValidacionButton_TouchUpInside:" destination="2368" id="2447" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                         </subviews>

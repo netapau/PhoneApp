@@ -26,9 +26,9 @@ namespace PhoneApp
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton ValidacionButton { get; set; }
 
-        [Action ("ValidameEstaActividad:")]
+        [Action ("ValidacionButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void ValidameEstaActividad (UIKit.UIButton sender);
+        partial void ValidacionButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {

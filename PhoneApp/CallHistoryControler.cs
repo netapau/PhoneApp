@@ -19,17 +19,14 @@ namespace PhoneApp
         
         class CallHistoryDataSource : UITableViewSource
         {
-
             CallHistoryControler Controler;
 
             public CallHistoryDataSource(CallHistoryControler controler)
             {
                 // Almacenar la instancia del UITableViewController
                 this.Controler = controler;
-
             }
 
-            //
             public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
             {
                 // Devuelve un UITableViewCell reutilizable creado con el identificador

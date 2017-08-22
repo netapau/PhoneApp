@@ -31,7 +31,7 @@ namespace PhoneApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton VerifyButton { get; set; }
+        UIKit.UIButton VerificarActividadButton { get; set; }
 
         [Action ("VerifyButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -59,9 +59,9 @@ namespace PhoneApp
                 TranslateButton = null;
             }
 
-            if (VerifyButton != null) {
-                VerifyButton.Dispose ();
-                VerifyButton = null;
+            if (VerificarActividadButton != null) {
+                VerificarActividadButton.Dispose ();
+                VerificarActividadButton = null;
             }
         }
     }

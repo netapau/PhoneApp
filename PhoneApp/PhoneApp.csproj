@@ -91,6 +91,10 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Info.plist" />
+    <Compile Include="NavigationControler.cs" />
+    <Compile Include="NavigationControler.designer.cs">
+      <DependentUpon>NavigationControler.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhoneTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
