@@ -13,13 +13,18 @@ namespace PhoneApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-        }
 
-        partial void ValidacionActividadButton_TouchUpInside(UIButton sender)
-        {
-            Validate();
-        }
+            ValidacionActividadButton.TouchUpInside += (object sender, EventArgs e) =>
+             {
 
+                 var Alert = UIAlertController.Create("Aqui deberia validar",
+                        "Porque no valida ? el manejador funciona y la nagevacion tambien",
+                        UIAlertControllerStyle.Alert);
+                 Alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+                 PresentViewController(Alert, true, null);
+             };
+
+        }
         private async void Validate()
         {
             var Client = new SALLab06.ServiceClient();

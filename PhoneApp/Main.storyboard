@@ -151,9 +151,7 @@
                                 <state key="normal" title="Validar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="ValidacionActividadButton_TouchUpInside:" destination="2368" id="3297" eventType="touchUpInside"/>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                         <variation key="default">
