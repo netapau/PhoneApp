@@ -79,7 +79,9 @@ namespace PhoneApp
                 ValidControler ValidacionControler = this.Storyboard.InstantiateViewController("ValidControler") as ValidControler;
                 if (ValidacionControler!=null)
                 {
+                    //this.NavigationController.PopToRootViewController(true);
                     this.NavigationController.PushViewController(ValidacionControler, true);
+                    
                 }
             };
         }
