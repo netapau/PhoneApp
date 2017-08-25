@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Foundation;
+using System;
 using System.Collections.Generic;
 using UIKit;
 
@@ -70,6 +71,17 @@ namespace PhoneApp
                     this.NavigationController.PushViewController(Controler, true);
                 }
             };
+
+            // Vamos a quitar el segue de la navigacion hacia la pantalla de validacion  !!!
+            // El boton de navigacion se llama : VerificarActividadButton
+            VerificarActividadButton.TouchUpInside += (object sender, EventArgs e) =>
+            {
+                ValidControler ValidacionControler = this.Storyboard.InstantiateViewController("ValidControler") as ValidControler;
+                if (ValidacionControler!=null)
+                {
+                    this.NavigationController.PushViewController(ValidacionControler, true);
+                }
+            };
         }
 
         public override void DidReceiveMemoryWarning()
@@ -78,14 +90,5 @@ namespace PhoneApp
             // Release any cached data, images, etc that aren't in use.
         }
 
-        // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades del Controlador !)
-        partial void VerificarActividadButton_TouchUpInside(UIButton sender)
-        {
-            if (this.Storyboard.InstantiateViewController("ValidControler") is ValidControler Controler)
-            {
-                //this.NavigationController.DidMoveToParentViewController(this);
-                this.NavigationController.PushViewController(Controler, true);
-            }
-        }
     }
 }

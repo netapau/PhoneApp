@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customModuleProvider="" sceneMemberID="viewController" customClass="ViewController">
+                <viewController id="BYZ-38-t0r" customModuleProvider="" sceneMemberID="viewController" customClass="ViewController" storyboardIdentifier="ViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,10 +53,7 @@
                                 <state key="normal" title="Verificar Actividad">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="VerificarActividadButton_TouchUpInside:" destination="BYZ-38-t0r" id="3298" eventType="touchUpInside"/>
-                                    <segue id="3720" destination="2368" kind="show" identifier="ValidarSegue"/>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                     </view>
@@ -75,7 +72,7 @@
         </scene>
         <scene sceneID="260">
             <objects>
-                <navigationController id="261" sceneMemberID="viewController" customClass="NavigationControler">
+                <navigationController id="261" sceneMemberID="viewController" customClass="NavigationControler" storyboardIdentifier="NavigationControler">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="263">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
