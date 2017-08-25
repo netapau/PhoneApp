@@ -53,7 +53,10 @@
                                 <state key="normal" title="Verificar Actividad">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections/>
+                                <connections>
+                                    <action selector="VerificarActividadButton_TouchUpInside:" destination="BYZ-38-t0r" id="3298" eventType="touchUpInside"/>
+                                    <segue id="3720" destination="2368" kind="show" identifier="ValidarSegue"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -68,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="-464"/>
+            <point key="canvasLocation" x="-145" y="-460"/>
         </scene>
         <scene sceneID="260">
             <objects>
@@ -83,7 +86,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="264" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="-464"/>
+            <point key="canvasLocation" x="-751" y="-459"/>
         </scene>
         <scene sceneID="804">
             <objects>
@@ -110,11 +113,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="811" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="-462"/>
+            <point key="canvasLocation" x="358" y="-582"/>
         </scene>
         <scene sceneID="2367">
             <objects>
-                <viewController id="2368" sceneMemberID="viewController" title="Validar actividad" storyboardIdentifier="ValidacionControler" customClass="ValidacionControler">
+                <viewController id="2368" sceneMemberID="viewController" title="Validar actividad" customClass="ValidControler" storyboardIdentifier="ValidControler">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2365"/>
                         <viewControllerLayoutGuide type="bottom" id="2366"/>
@@ -151,7 +154,9 @@
                                 <state key="normal" title="Validar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections/>
+                                <connections>
+                                    <action selector="ValidacionActividadButton_TouchUpInside:" destination="2368" id="3297" eventType="touchUpInside"/>
+                                </connections>
                             </button>
                         </subviews>
                         <variation key="default">
@@ -182,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2370" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="-467"/>
+            <point key="canvasLocation" x="395" y="185"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

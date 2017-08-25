@@ -11,8 +11,8 @@ using UIKit;
 
 namespace PhoneApp
 {
-    [Register ("ValidacionControler")]
-    partial class ValidacionControler
+    [Register ("ValidControler")]
+    partial class ValidControler
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -25,6 +25,10 @@ namespace PhoneApp
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton ValidacionActividadButton { get; set; }
+
+        [Action ("ValidacionActividadButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ValidacionActividadButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {

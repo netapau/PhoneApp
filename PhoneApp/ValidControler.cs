@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using Foundation;
+﻿using Foundation;
+using System;
 using UIKit;
 
 namespace PhoneApp
 {
-    public partial class ValidacionControler : UIViewController
+    public partial class ValidControler : UIViewController
     {
-        public ValidacionControler (IntPtr handle) : base (handle)
+        public ValidControler (IntPtr handle) : base (handle)
         {
-            
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
-            ValidacionActividadButton.TouchUpOutside += ValidacionActividadButton_TouchUpOutside;
         }
 
-        private void ValidacionActividadButton_TouchUpOutside(object sender, EventArgs e)
+        partial void ValidacionActividadButton_TouchUpInside(UIButton sender)
         {
-            Valida();
+            Validate();
         }
 
-        private async void Valida()
+        private async void Validate()
         {
             var Client = new SALLab06.ServiceClient();
             var Result = await Client.ValidateAsync(CorreoTxt.Text, ContrasenhaTxt.Text, this);

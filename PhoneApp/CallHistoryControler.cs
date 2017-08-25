@@ -13,10 +13,10 @@ namespace PhoneApp
 
         public CallHistoryControler(IntPtr handle) : base(handle)
         {
-            TableView.RegisterClassForCellReuse(typeof(UITableViewCell),CallHistoryCellID);
+            TableView.RegisterClassForCellReuse(typeof(UITableViewCell), CallHistoryCellID);
             TableView.Source = new CallHistoryDataSource(this);
         }
-        
+
         class CallHistoryDataSource : UITableViewSource
         {
             CallHistoryControler Controler;
@@ -42,6 +42,17 @@ namespace PhoneApp
             {
                 return Controler.PhoneNumbers.Count;
             }
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+        }
+
+        public override void DidReceiveMemoryWarning()
+        {
+            base.DidReceiveMemoryWarning();
+            // Release any cached data, images, etc that aren't in use.
         }
     }
 }

@@ -13,7 +13,6 @@ namespace PhoneApp
 
         public ViewController(IntPtr handle) : base(handle)
         {
-
         }
 
         public override void ViewDidLoad()
@@ -58,7 +57,7 @@ namespace PhoneApp
                 }
             };
 
-            // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades !)
+            // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades del Controlador !)
             CallHistoryButton.TouchUpInside += (sender, arg) =>
             {
                 // Puede instanciarse el controlador con ID "CallHistoryControler" ?
@@ -71,25 +70,22 @@ namespace PhoneApp
                     this.NavigationController.PushViewController(Controler, true);
                 }
             };
-
-            // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades !)
-            VerificarActividadButton.TouchUpInside += (sender, arg) =>
-            {
-                // Puede instanciarse el controlador con ID "CallHistoryControler" ?
-                // establecido en el diseñador.
-                if (this.Storyboard.InstantiateViewController("ValidacionControler") is ValidacionControler Controler)
-                {
-                    // Coloca al controlador en la pila de navigacion
-                    this.NavigationController.PushViewController(Controler, true);
-                }
-            };
-
         }
 
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
+        }
+
+        // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades del Controlador !)
+        partial void VerificarActividadButton_TouchUpInside(UIButton sender)
+        {
+            if (this.Storyboard.InstantiateViewController("ValidControler") is ValidControler Controler)
+            {
+                //this.NavigationController.DidMoveToParentViewController(this);
+                this.NavigationController.PushViewController(Controler, true);
+            }
         }
     }
 }
