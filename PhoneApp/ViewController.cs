@@ -61,11 +61,11 @@ namespace PhoneApp
             // Maneja navegacion mediante codigo (hay que poner el ID en las propriedades del Controlador !)
             CallHistoryButton.TouchUpInside += (sender, arg) =>
             {
-                // Puede instanciarse el controlador con ID "CallHistoryControler" ?
+                // Puede instanciarse el controlador con ID "CallHistoryController" ?
                 // establecido en el diseñador.
-                if (this.Storyboard.InstantiateViewController("CallHistoryControler") is CallHistoryControler Controler)
+                if (this.Storyboard.InstantiateViewController("CallHistoryController") is CallHistoryController Controler)
                 {
-                    // Proporciona la lista de numeros telefonicos al CallHistoryControler
+                    // Proporciona la lista de numeros telefonicos al CallHistoryController
                     Controler.PhoneNumbers = PhoneNumbers;
                     // Coloca al controlador en la pila de navigacion
                     this.NavigationController.PushViewController(Controler, true);
@@ -76,12 +76,9 @@ namespace PhoneApp
             // El boton de navigacion se llama : VerificarActividadButton
             VerificarActividadButton.TouchUpInside += (object sender, EventArgs e) =>
             {
-                ValidControler ValidacionControler = this.Storyboard.InstantiateViewController("ValidControler") as ValidControler;
-                if (ValidacionControler!=null)
+                if (this.Storyboard.InstantiateViewController("ValidControler") is ValidControler ValidacionControler)
                 {
-                    //this.NavigationController.PopToRootViewController(true);
                     this.NavigationController.PushViewController(ValidacionControler, true);
-                    
                 }
             };
         }

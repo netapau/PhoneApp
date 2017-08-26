@@ -5,13 +5,13 @@ using UIKit;
 
 namespace PhoneApp
 {
-    public partial class CallHistoryControler : UITableViewController
+    public partial class CallHistoryController : UITableViewController
     {
         public List<string> PhoneNumbers { get; set; }
 
         protected NSString CallHistoryCellID = new NSString("CallHistoryCell");
 
-        public CallHistoryControler(IntPtr handle) : base(handle)
+        public CallHistoryController(IntPtr handle) : base(handle)
         {
             TableView.RegisterClassForCellReuse(typeof(UITableViewCell), CallHistoryCellID);
             TableView.Source = new CallHistoryDataSource(this);
@@ -19,9 +19,9 @@ namespace PhoneApp
 
         class CallHistoryDataSource : UITableViewSource
         {
-            CallHistoryControler Controler;
+            CallHistoryController Controler;
 
-            public CallHistoryDataSource(CallHistoryControler controler)
+            public CallHistoryDataSource(CallHistoryController controler)
             {
                 // Almacenar la instancia del UITableViewController
                 this.Controler = controler;

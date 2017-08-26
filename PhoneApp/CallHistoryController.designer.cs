@@ -12,7 +12,7 @@ using UIKit;
 namespace PhoneApp
 {
     [Register ("CallHistoryControler")]
-    partial class CallHistoryControler
+    partial class CallHistoryController
     {
         void ReleaseDesignerOutlets ()
         {

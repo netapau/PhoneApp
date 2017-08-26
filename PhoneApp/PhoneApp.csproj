@@ -84,9 +84,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CallHistoryControler.cs" />
-    <Compile Include="CallHistoryControler.designer.cs">
-      <DependentUpon>CallHistoryControler.cs</DependentUpon>
+    <Compile Include="CallHistoryController.cs" />
+    <Compile Include="CallHistoryController.designer.cs">
+      <DependentUpon>CallHistoryController.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
