@@ -11,7 +11,7 @@ using UIKit;
 
 namespace PhoneApp
 {
-    [Register ("CallHistoryControler")]
+    [Register ("CallHistoryController")]
     partial class CallHistoryController
     {
         void ReleaseDesignerOutlets ()

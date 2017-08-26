@@ -17,11 +17,13 @@ namespace PhoneApp
             ValidacionActividadButton.TouchUpInside += (object sender, EventArgs e) =>
              {
 
-                 var Alert = UIAlertController.Create("Aqui deberia validar",
-                        "Porque no valida ? el manejador funciona y la nagevacion tambien",
-                        UIAlertControllerStyle.Alert);
-                 Alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
-                 PresentViewController(Alert, true, null);
+                 //var Alert = UIAlertController.Create("Aqui deberia validar",
+                 //       "Porque no valida ? el manejador funciona y la nagevacion tambien",
+                 //       UIAlertControllerStyle.Alert);
+                 //Alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+                 //PresentViewController(Alert, true, null);
+
+                 Validate();
              };
 
         }

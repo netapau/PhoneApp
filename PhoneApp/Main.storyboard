@@ -87,7 +87,7 @@
         </scene>
         <scene sceneID="804">
             <objects>
-                <tableViewController id="805" sceneMemberID="viewController" customClass="CallHistoryControler" title="Historial de llamadas" storyboardIdentifier="CallHistoryControler">
+                <tableViewController id="805" sceneMemberID="viewController" customClass="CallHistoryController" title="Historial de llamadas" storyboardIdentifier="CallHistoryController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="806">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
